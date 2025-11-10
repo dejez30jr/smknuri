@@ -46,6 +46,19 @@
   <!-- Favicon -->
   <link rel="icon" href="{{ asset('images/logo.webp') }}" type="image/png">
 </head>
+  @if(session('pengembangan'))
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      Swal.fire({
+        title: 'info!',
+        text: "{{ session('pengembangan') }}",
+        icon: 'success',
+        confirmButtonColor: '#4F46E5', // warna indigo
+        confirmButtonText: 'OK'
+      });
+    });
+  </script>
+@endif
 <style>
   /* ==== hero section bg-animatsiii -> sengaja di taru di sini alesan nya tanya derisdev ==== */
   .bg-slideshow {
@@ -219,19 +232,29 @@
       <!-- Kolom Kiri (Gambar) -->
       <div class="grid grid-cols-2 gap-4">
         <div class="space-y-4">
-          @forelse ($homepage as $cmsimg)
-          <img src="{{ asset('storage/' . $cmsimg->profile_img1) }}" loading="lazy" alt="SMK NURUL IMAN"
+          @forelse ($profile as $img)
+          <img src="{{ asset('storage/' . $img->profile_img1) }}" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
           @empty
           <img src="{{ asset('images/pp3.jpg') }}" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
           @endforelse
-          <img src="{{ asset('images/pp1.webp') }}" loading="lazy" alt="SMK NURUL IMAN"
+          @forelse ($profile as $img)
+          <img src="{{ asset('storage/' . $img->profile_img2) }}" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
+          @empty
+          <img src="{{ asset('images/pp3.jpg') }}" loading="lazy" alt="SMK NURUL IMAN"
+            class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
+          @endforelse
         </div>
         <div>
-          <img src="{{ asset('images/pp2.webp') }}" loading="lazy" alt="SMK NURUL IMAN"
+          @forelse ($profile as $img)
+          <img src="{{ asset('storage/' . $img->profile_img3) }}" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-full">
+          @empty
+          <img src="{{ asset('images/pp3.jpg') }}" loading="lazy" alt="SMK NURUL IMAN"
+            class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
+          @endforelse
         </div>
       </div>
 
@@ -240,9 +263,9 @@
         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
           PROFIL <br> SMK NURUL IMAN
         </h2>
-        @foreach ($homepage as $profiledesc)
+        @foreach ($profile as $desc)
         <p class="text-gray-600 leading-relaxed">
-          {{ $profiledesc->profile_desc }}
+          {!! $desc->profile_desc !!}
           <a href="/profile-sekolah#sejarah" class="text-unuder"><u>Lihat selengkapnya</u></a>
         </p>
         @endforeach
@@ -252,7 +275,7 @@
           <!-- Item 1 -->
           <div class="flex items-center space-x-4 bg-[#fed700] text-black rounded-lg p-4 shadow-md">
             <div class="bg-white font-bold px-4 py-2 rounded-md text-lg">VISI</div>
-            <p class="text-sm md:text-base">Menghasilkan peserta didik yang kompeten, berkualitas,
+              <p class="text-sm md:text-base">Menghasilkan peserta didik yang kompeten, berkualitas,
               berprestasi, sesuai
               dengan bidang keilmuan dan keahlian</p>
           </div>

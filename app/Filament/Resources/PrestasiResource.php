@@ -31,7 +31,7 @@ class PrestasiResource extends Resource
             ->schema([
                 TextInput::make('title')->label('judul prestasi')->required(),
                 TextInput::make('deskripsi')->label('deskripsi prestasi')->required(),
-                FileUpload::make('gambar')->label('gambar prestasi max: 500kb')->maxSize(500)->image()->required()->disk('public')->directory('prestasi-images'),
+                FileUpload::make('gambar')->label('gambar prestasi max: 500kb')->maxSize(500)->image()->disk('public')->directory('prestasi-images'),
             ]);
     }
 
@@ -48,6 +48,7 @@ class PrestasiResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

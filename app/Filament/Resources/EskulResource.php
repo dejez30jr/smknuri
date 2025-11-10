@@ -31,7 +31,7 @@ class EskulResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('title')->label('Judul Prestasi')->Placeholder('contoh: drumband')->required(),
+                TextInput::make('title')->label('Judul Eskul')->Placeholder('contoh: drumband')->required(),
                 TextInput::make('desc')->label('deskripsi max 10 kata saja')->required(),
                 TextInput::make('joinCount')->label('Jumlah siswa')->placeholder('jumlah siswa yang masuk di eskul tersebut')->required(),
                 FileUpload::make( 'gambar' )
@@ -66,6 +66,7 @@ class EskulResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

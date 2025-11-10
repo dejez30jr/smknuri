@@ -8,6 +8,7 @@ use App\Models\Saran;
 use App\Models\Staff;
 use App\Models\Article;
 use App\Models\beranda;
+use App\Models\Profile;
 use App\Models\Teacher;
 use App\Models\Prestasi;
 use App\Models\homepages;
@@ -47,6 +48,8 @@ class BerandaController extends Controller
         $guru = Teacher::all();
         $countGuru = $guru->count();
 
+        $profile = Profile::all();
+
         // $testimoni = Saran::all();  masih tahap pengembangan
 
         // data cms section prestasi
@@ -60,7 +63,7 @@ class BerandaController extends Controller
         // ->groupBy('staff')
         // ->selectRaw('count(*) as total')
         // ->get();
-        return view( 'pages.page_beranda.beranda', compact( 'card1', 'card2', 'card3', 'card4', 'countGuru', 'countStaff', 'homepage', 'prestasi', 'eskul' ) );
+        return view( 'pages.page_beranda.beranda', compact( 'card1', 'card2', 'card3', 'card4', 'countGuru', 'countStaff', 'homepage', 'prestasi', 'eskul', 'profile' ) );
     }
     // end
 }

@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Filament\Resources\Resource;
+use Filament\Actions\DeleteAction;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
@@ -23,6 +24,7 @@ class SpmbResource extends Resource {
     protected static ?string $model = Spmb::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Spmb';
 
     public static function form( Form $form ): Form {
         return $form
@@ -78,6 +80,7 @@ class SpmbResource extends Resource {
         ] )
         ->actions( [
            EditAction::make(),
+           Tables\Actions\DeleteAction::make(),
 
           Action::make('export_pdf')
     ->label('PDF')
@@ -85,7 +88,7 @@ class SpmbResource extends Resource {
     ->color('success')
     ->action(function ($record) {
         $artikels = collect([$record]); // hanya 1 artikel yang dipilih
-        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pages.spmb.pdf', compact('artikels'));
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pages.page_spmb.pdf', compact('artikels'));
 
         return response()->streamDownload(
             fn() => print($pdf->output()),

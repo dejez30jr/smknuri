@@ -25,6 +25,12 @@ class PrestasiResource extends Resource
     protected static ?string $navigationLabel = 'Prestasi';
     protected static ?string $navigationGroup = 'CMS';
 
+public static function getPluralModelLabel(): string
+{
+    return 'Section Prestasi';
+}
+
+
     public static function form(Form $form): Form
     {
         return $form

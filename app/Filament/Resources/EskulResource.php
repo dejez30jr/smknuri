@@ -26,6 +26,12 @@ class EskulResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Eskul';
     protected static ?string $navigationGroup = 'CMS';
+    
+    public static function getPluralModelLabel(): string
+    {
+    return 'Section Eskul';
+    }
+
 
     public static function form(Form $form): Form
     {

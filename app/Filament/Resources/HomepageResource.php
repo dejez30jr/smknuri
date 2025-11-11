@@ -16,10 +16,17 @@ use App\Filament\Resources\HomepageResource\Pages;
 
 class HomepageResource extends Resource {
     protected static ?string $model = homepages::class;
+    
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'CMS';
     protected static ?string $navigationLabel = 'Hero dan footer';
+    
+    public static function getModelLabel(): string
+    {
+    return 'Hero section dan footer'; // Ganti sesuai keinginan
+    }
+
 
     // Batasi hanya 1 data terbaru
     public static function getEloquentQuery(): Builder {
@@ -61,6 +68,10 @@ class HomepageResource extends Resource {
         return false;
     }
 
+    //apus tombol create
+    public static function canCreate(): bool {
+        return false;
+    }
     public static function getRelations(): array {
         return [];
     }

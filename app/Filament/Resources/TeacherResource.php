@@ -21,6 +21,11 @@ class TeacherResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
     protected static ?string $navigationLabel = 'Guru';
+    
+    public static function getPluralModelLabel(): string
+    {
+    return 'Guru';
+    }
 
     // Masukkan ke dalam dropdown Content
     protected static ?string $navigationGroup = 'Data Master';

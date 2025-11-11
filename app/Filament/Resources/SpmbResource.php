@@ -25,6 +25,12 @@ class SpmbResource extends Resource {
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Spmb';
+    
+    public static function getPluralModelLabel(): string
+    {
+    return 'spmb dalam tahap pengembangan ';
+    }
+
 
     public static function form( Form $form ): Form {
         return $form

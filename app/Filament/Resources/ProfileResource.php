@@ -29,6 +29,12 @@ class ProfileResource extends Resource
     protected static ?string $navigationLabel = 'Profil';
     protected static ?string $navigationGroup = 'CMS';
 
+    public static function getPluralModelLabel(): string
+    {
+    return 'Section Profil';
+    }
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -86,7 +92,7 @@ class ProfileResource extends Resource
     {
         return $table
             ->columns([
-            TextColumn::make('profile_desc')->label('deskripsi')->formatStateUsing(fn ($state) => strip_tags($state)),
+            TextColumn::make('profile_desc')->label('deskripsi')->limit('15')->formatStateUsing(fn ($state) => strip_tags($state)),
             ImageColumn::make( 'profile_img1' )
             ->disk( 'public' )
             ->height( 60 )
@@ -118,6 +124,11 @@ class ProfileResource extends Resource
         return [
             //
         ];
+    }
+    
+        //apus tombol create
+    public static function canCreate(): bool {
+        return false;
     }
 
     public static function getPages(): array

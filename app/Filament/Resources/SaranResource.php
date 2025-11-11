@@ -20,6 +20,11 @@ class SaranResource extends Resource {
     protected static ?string $navigationIcon = 'heroicon-o-wrench';
     protected static ?string $navigationLabel = 'Dalam tahap Pengembangan';
     
+    public static function getPluralModelLabel(): string
+{
+    return 'Saran sedang tahap Pengembangan';
+}
+
 
     // Judul halaman index ( table )
     public static function getTitle(): string {

@@ -41,7 +41,7 @@
   <meta name="twitter:image" content="{{ asset('images/pp1.webp') }}">
 
   <!-- Canonical (hindari duplikat URL) -->
-  <link rel="canonical" href="https://smknuruliman.sch.id">
+<link rel="canonical" href="https://smknuruliman.sch.id">
 
   <!-- Favicon -->
   <link rel="icon" href="{{ asset('images/logo.webp') }}" type="image/png">
@@ -50,9 +50,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       Swal.fire({
-        title: 'info!',
+        title: 'Info!',
         text: "{{ session('pengembangan') }}",
-        icon: 'success',
+        icon: 'info',
         confirmButtonColor: '#4F46E5', // warna indigo
         confirmButtonText: 'OK'
       });
@@ -226,7 +226,7 @@
   <!-- ======= End Statistik Section ======= -->
 
   <!-- ===== about section ====== -->
-  <section class="py-6 md:py-16 px-6 bg-white md:px-10" id="about" data-aos="fade-up" data-aos-duration="1000">
+  <section class="py-6 md:py-16 mt-4 px-6 bg-white md:px-10" id="about" data-aos="fade-up" data-aos-duration="1000">
     <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
       <!-- Kolom Kiri (Gambar) -->
@@ -406,7 +406,7 @@
   <!-- ======= section info end ========= -->
 
   <!-- ======== eskul section ========= -->
-  <section class="bg-white text-white px-4 mx:pt-[25px] pb-6" id="eskul">
+  <section class="bg-white text-white md:px-4 mx:pt-[25px] pb-6" id="eskul">
     <div class="">
     <h2 class="text-3xl md:text-4xl font-extrabold font-bold text-black text-center mb-10">EKSTRAKULIKULER</h2>
     </div>
@@ -414,12 +414,12 @@
     <div class="relative">
       <!-- Tombol kiri -->
       <button id="prevBtn"
-        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black px-3 py-2 rounded-full">
+        class="absolute left-4 top-1/2 mx:ml-[4px] -translate-y-1/2 z-10 bg-black/50 hover:bg-black px-3 py-2 rounded-full">
         <i class="ph ph-caret-left"></i>
       </button>
 
       <!-- Wrapper Carousel -->
-      <div id="carousel" class="flex overflow-hidden  scroll-smooth">
+      <div id="carousel" class="flex px-4 overflow-auto md:overflow-hidden scroll-smooth">
         <!-- Card -->
         @forelse ($eskul as $post)
         <div
@@ -441,7 +441,7 @@
 
       <!-- Tombol kanan -->
       <button id="nextBtn"
-        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black px-3 py-2 rounded-full">
+        class="absolute right-4 top-1/2 mx:mr-[4px] -translate-y-1/2 z-10 bg-black/50 hover:bg-black px-3 py-2 rounded-full">
         <i class="ph ph-caret-right"></i>
       </button>
     </div>
@@ -528,7 +528,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Card 1 -->
           @foreach ($prestasi as $post)
-          <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <article class="bg-white rounded-2xl shadow-md overflow-hidden">
             <div class="relative h-56 sm:h-60 md:h-64">
               @if ($prestasi && $post->gambar)
                  <img src="{{ asset('storage/' . $post->gambar) }}" alt="SC. Mindanou" class="w-full h-full object-cover">

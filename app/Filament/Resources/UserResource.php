@@ -18,6 +18,11 @@ use Filament\Forms\Components\PasswordInput;
 
 class UserResource extends Resource {
     protected static ?string $model = User::class;
+    
+    public static function getPluralModelLabel(): string
+    {
+    return 'User';
+    }
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     // protected static ?string $navigationLabel = 'Account';

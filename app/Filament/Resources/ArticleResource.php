@@ -22,6 +22,12 @@ class ArticleResource extends Resource {
     protected static ?string $navigationLabel = 'Artikel';
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
     protected static ?string $navigationGroup = 'CMS';
+    
+    public static function getPluralModelLabel(): string
+    {
+    return 'Artikel dan berita';
+    }
+
 
     // form artikel
     public static function form( Form $form ): Form {

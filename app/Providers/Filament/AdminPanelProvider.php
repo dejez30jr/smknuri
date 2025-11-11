@@ -24,7 +24,7 @@ class AdminPanelProvider extends PanelProvider {
         return $panel
         ->default()
         ->id( 'admin' )
-        ->path( 'admin' )
+        ->path( 'dashboard' )
         ->brandName( 'SMK NURUL IMAN' )
         ->brandLogo( asset( 'images/logo.webp' ) )
         ->brandLogoHeight( '3rem' )

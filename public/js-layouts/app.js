@@ -84,3 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", changeActiveLink);
 });
 // ==================== end Scroll spy - highlight menu item based on section in viewport ==================== //
+
+//footer
+   document.getElementById("rplBtn").addEventListener("click", function() {
+        alert("Created by Genfirst Deris, Azzam, Fahri");
+    });

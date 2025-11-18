@@ -29,7 +29,7 @@ Route::get('/pendaftaran-spmb', [SpmbController::class,  'index'])->name('formul
 Route::post('/pendaftaran-spmb/store', [SpmbController::class, 'store'])->name('Spmb.store');
 
 // ==========  route profil sekolah  ========= //
-Route::get('/profile-sekolah', [ProfilsekolahController::class, 'index']);
+Route::get('/profile-sekolah', [ProfilsekolahController::class, 'index'])->name('profile-sekolah');
 
 // ==========  route profil sekolah  ========= //
 Route::get('/jurusan', [JurusanController::class, 'index']);

@@ -12,8 +12,23 @@ class ProfilsekolahController extends Controller
     public function index()
     {
         $guru = Teacher::all();
+        $pimpinan = Teacher::where( 'kategori', 'pimpinan' )
+        ->latest()
+        ->get();
+        $rpl = Teacher::where( 'kategori', 'rpl' )
+        ->latest()
+        ->get();
+        $akl = Teacher::where( 'kategori', 'akl' )
+        ->latest()
+        ->get();
+        $mp = Teacher::where( 'kategori', 'mp' )
+        ->latest()
+        ->get();
+        $umum = Teacher::where( 'kategori', 'umum' )
+        ->latest()
+        ->get();
         $homepage = homepages::all(); // ini di panggil di page profil karena page profil ada footer yang data nya dinamis/bisa di ubah make cms
 
-        return view('pages.page_profil.profil-sekolah', compact('guru', 'homepage'));
+        return view('pages.page_profil.profil-sekolah', compact('guru', 'homepage', 'pimpinan', 'rpl', 'akl', 'mp', 'umum'));
     }
 }

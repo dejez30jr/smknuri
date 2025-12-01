@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Sekolah | Smk Nurul Iman</title>
+    <title>Profil Sekolah | SMK Nurul Iman</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -66,8 +66,34 @@
         </div>
 
         <div class="bg-white">
+            <!-- navigasi -->
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-6 md:px-16 pt-6 bg-white">
+
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#sejarah" class=" flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-left"></i> Kembali
+                            </a>
+                        </button>
+                    </span>
+                </div>
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#guru" class=" flex items-center gap-2">
+                               Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+            <!-- navigasi end -->
             <div
-                class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:px-16 py-12 md:py-16">
+                class="relative bg-white grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:px-16 py-12 md:py-16">
 
                 <!-- Box 1: Deskripsi -->
                 <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
@@ -139,8 +165,34 @@
 
             <!-- BAGIAN KONTEN -->
             <div class="bg-white">
+                  <!-- navigasi -->
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-6 md:px-16 pt-6 bg-white">
+
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#vimi" class=" flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-left"></i> Kembali
+                            </a>
+                        </button>
+                    </span>
+                </div>
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#fasilitas" class=" flex items-center gap-2">
+                               Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+            <!-- navigasi end -->
                 <div
-                    class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl px-6 md:px-16 py-10 md:py-16 leading-relaxed text-gray-800 mx-auto py-10 space-y-4">
+                    class="relative bg-white px-6 md:px-16 py-10 md:py-16 leading-relaxed text-gray-800 mx-auto py-10 space-y-4">
 
                     <!-- pimpinan sekolah -->
                     <div class="cursor-pointer">
@@ -149,12 +201,12 @@
                             Pimpinan Sekolah</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-2 md:gap-4 ">
                             @foreach ($pimpinan as $post)
-                            <div class="bg-white flex flex-col gap-2 md:gap-4 overflow-hidden text-center transition">
+                            <div class="bg-white flex flex-col shadow-md gap-2 md:gap-4 overflow-hidden text-center transition">
                                 <div class="p-3 bg-[#283747] text-white">
                                     <h3 class="text-sm font-semibold">{{$post->title}}</h3>
                                 </div>
                                 <img src="/web_sekolah/public/storage/{{$post->image}}"
-                                    class="w-full px-4 md:px-[0px] h-[300px] md:h-[300px] bg-contain object-cover">
+                                    class="w-full px-4 md:px-[0px] h-[400px] md:h-[300px] object-cover md:object-contain">
                                 <div class="p-3 bg-[#283747] text-white">
                                     <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
                                 </div>
@@ -166,7 +218,7 @@
                     <!-- ========== Rpl ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Guru RPL</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -192,7 +244,7 @@
                     <!-- ========== mp ========== -->
                     <div class=" py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Guru MP</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -218,7 +270,7 @@
                     <!-- ========== akl ========== -->
                     <div class=" py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Guru AKL</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -244,7 +296,7 @@
                     <!-- ========== mapel umum ========== -->
                     <div class=" py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Guru Umum</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -253,6 +305,32 @@
                             <div class="grid grid-cols-2 overflow-auto md:grid-cols-4 gap-4 pt-5 pb-4">
 
                                 @foreach ($umum as $post)
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                    <img src="/web_sekolah/public/storage/{{$post->image}}"
+                                        class="w-full h-[230px] md:h-[300px] object-cover">
+                                    <div class="p-3">
+                                        <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
+                                        <p class="text-xs text-gray-600">{{ $post->title }}</p>
+                                    </div>
+                                </div>
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ========== mapel umum ========== -->
+                    <div class=" py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
+                        <div
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            <span class="font-medium">Tenaga Pendidikan</span>
+                            <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
+                        </div>
+
+                        <div class="max-h-0 overflow-auto transition-all duration-500">
+                            <div class="grid grid-cols-2 overflow-auto md:grid-cols-4 gap-4 pt-5 pb-4">
+
+                                @foreach ($tendik as $post)
                                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                                     <img src="/web_sekolah/public/storage/{{$post->image}}"
                                         class="w-full h-[230px] md:h-[300px] object-cover">
@@ -296,30 +374,57 @@
 
             <!-- BAGIAN KONTEN -->
             <div class="bg-white">
-                <section
-                    class="relative -mt-[20px] md:-mt-[20px] bg-white rounded-t-3xl px-6 md:px-16 py-12 md:py-16 leading-relaxed text-gray-800">
+            <section class="relative md:px-16 pt-6 md:pt-16 -mt-[20px] md:-mt-0 bg-white rounded-t-3xl">
+              <!-- navigasi -->
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-6 pt-6 md:pt-0 md:px-16 bg-white">
+
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="/" class=" flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-left"></i> Kembali
+                            </a>
+                        </button>
+                    </span>
+                </div>
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#sejarah" class=" flex items-center gap-2">
+                               Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+            <!-- navigasi end -->
+
+            <section
+                    class="relative bg-white px-6 md:px-16 py-12 md:py-16 leading-relaxed text-gray-800">
                     <div class="mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-6 items-center">
 
                         <!-- Kiri: Text -->
                         <div class="space-y-5">
-                            <h3 class="text-[18px] uppercase tracking-wide">Prakata Kepala Sekolah</h3>
+                            <h3 class="text-md uppercase tracking-wide">Prakata Kepala Sekolah</h3>
                             <h1 class="text-3xl md:text-7xl font-bold">
                                 SMK <span class="text-yellow-400">NURUL IMAN</span>
                             </h1>
-                            <p class="text-lg md:text-2xl text-gray-600 leading-relaxed">
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit
-                                quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id.
+                            <p class="text-md md:text-2xl text-gray-600 leading-relaxed">
+                              "<i>Selamat datang di website resmi sekolah kami! Kami berharap informasi di sini dapat membantu dan memberikan kemudahan bagi Anda. Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami. Terima kasih atas kunjungan Anda!"</i>
                             </p>
                             <button
-                                class="text-[18px] px-10 py-2 border border-gray-700 text-black rounded-md hover:bg-yellow-400 hover:text-gray-900 transition">
+                                class="text-[13px] md:text-[18px] px-10 py-2 border border-gray-700 text-black rounded-md transition">
                                 Bapak Ero Rohada M.M
                             </button>
                         </div>
 
                         <!-- Kanan: Gambar -->
                         <div class="flex justify-center md:justify-end mb-6 md:mb-0">
-                            <img src="https://udeanleak.github.io/webkolah/aset/paero.png" alt="Gedung Sekolah"
-                                class="rounded-xl shadow-lg h-[350px] md:h-[500px] w-full max-w-md object-cover">
+                            <img src="https://smknuruliman.sch.id/web_sekolah/public/storage/teachers/01KADMERQAF4V30V41QM43C38R.JPG" alt="Gedung Sekolah"
+                                class="rounded-xl shadow-lg h-[250px] md:h-[500px] w-full max-w-md object-cover">
                         </div>
                     </div>
                 </section>
@@ -351,12 +456,38 @@
 
             <!-- BAGIAN KONTEN -->
             <div class="bg-white">
-                <div class="relative -mt-[20px] md:-mt-[20px] bg-white rounded-t-3xl mx-auto px-8 py-10 space-y-4">
+                 <!-- navigasi -->
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-6 md:px-16 pt-6 bg-white">
+
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#guru" class=" flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-left"></i> Kembali
+                            </a>
+                        </button>
+                    </span>
+                </div>
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#sambutan" class=" flex items-center gap-2">
+                               Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+            <!-- navigasi end -->
+                <div class="relative bg-white mx-auto px-6 md:px-16 py-10 space-y-4">
 
                     <!-- ========== GEDUNG SEKOLAH ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Gedung Sekolah</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -380,7 +511,7 @@
                     <!-- ========== LABORATORIUM ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Laboratorium</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -404,7 +535,7 @@
                     <!-- ========== Lapangan ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Lapangan</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -428,7 +559,7 @@
                     <!-- ========== halte ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Halte</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -452,7 +583,7 @@
                     <!-- ========== RUANG KELAS ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Ruang Kelas</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -476,7 +607,7 @@
                     <!-- ========== MASJID ========== -->
                     <div class="py-4 cursor-pointer transition" onclick="toggleAccordion(this)">
                         <div
-                            class="flex justify-between items-center border border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
+                            class="flex justify-between items-center border shadow-md border-gray-400 p-4 rounded-3xl hover:bg-[#283747] hover:text-white transition">
                             <span class="font-medium">Masjid</span>
                             <span class="text-xl transition rotate-0"><i class="fa-solid fa-angle-down"></i></span>
                         </div>
@@ -525,8 +656,35 @@
 
             <!-- BAGIAN KONTEN -->
             <div class="bg-white">
+             <!-- navigasi -->
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-6 md:px-16 pt-6 bg-white">
+
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#sambutan" class=" flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-left"></i> Kembali
+                            </a>
+                        </button>
+                    </span>
+                </div>
+                <div>
+                    <span class="flex items-center text-sm md:text-base">
+                        <button
+                            class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 md:px-4 py-2 rounded-full transition">
+                            <a href="{{ route('profile-sekolah') }}#vimi" class=" flex items-center gap-2">
+                               Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+            <!-- navigasi end -->
+
                 <section
-                    class="relative -mt-[20px] md:-mt-[20px] bg-white rounded-t-3xl px-6 md:px-16 py-12 md:py-16 leading-relaxed text-gray-800">
+                    class="relative bg-white px-6 md:px-16 py-12 md:py-16 leading-relaxed text-gray-800">
                     <p class="mb-6 text-gray-600 leading-relaxed">
                         SMK Nurul Iman didirikan pada Tahun 1989 dengan 2 jurusan, Berupa jurusan Akutansi dan
                         Ketatausahaan
@@ -630,4 +788,4 @@
         <script src="{{ asset('js-ProfileSekolah/pp.js') }}"></script>
 </body>
 
-</html>
+</html>  

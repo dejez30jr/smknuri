@@ -9,7 +9,7 @@ class Spmb extends Model
 {
     use HasFactory;
 
-    protected $table = 'Registrasi_pelajar';
+    protected $table = 'registrasi_pelajar';
 
     protected $fillable = [
         'full_name',

@@ -17,13 +17,13 @@
   />
 
   <!-- SEO TAG -->
-  <title>SMK NURUL IMAN | Sekolah Menengah Kejuruan Unggulan & Pendaftaran Online 2026</title>
+  <title>SMK Nurul Iman Jakarta</title>
   <!-- Deskripsi SEO -->
   <meta name="description"
     content="SMK Nurul Iman adalah sekolah menengah kejuruan unggulan dengan jurusan Rekaya Perangkat Lunak, Manajemen Perkantoran dan Akuntansi Keuangan Lembaga, Daftar SPMB 2026 secara online dengan mudah.">
   <!-- Kata Kunci SEO -->
   <meta name="keywords"
-    content="SMK Nurul Iman, Sekolah Menengah Kejuruan, Pendaftaran SMK, SMK terbaik, SMK swasta, SPMB 2026, Rekaya Perangkat Lunak, Perkantoran, Akuntansi Keuangan Lembaga, sekolah unggulan, sekolah kejuruan, daftar sekolah menengah, SMK jakarta timur">
+    content="SMK Nurul Iman, SMK Nurul Iman jakarta, Sekolah Menengah Kejuruan, Pendaftaran SMK, SMK terbaik, SMK swasta, SPMB 2026, Rekaya Perangkat Lunak, Perkantoran, Akuntansi Keuangan Lembaga, sekolah unggulan, sekolah kejuruan, daftar sekolah menengah, SMK jakarta timur">
   <meta name="author" content="SMK Nurul Iman">
   <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:title" content="SMK Nurul Iman | Pendaftaran Online SPMB 2026">
@@ -60,6 +60,10 @@
   </script>
 @endif
 <style>
+
+   body::-webkkit-scrollbar{
+      display: none; 
+   }
   /* ==== hero section bg-animatsiii -> sengaja di taru di sini alesan nya tanya derisdev ==== */
   .bg-slideshow {
     position: relative;
@@ -85,26 +89,26 @@
 
   /* Gambar pertama (default background) */
   .bg-slideshow::before {
-    background-image: url('{{ asset('images/hero.avif') }}');
+    background-image: url('/web_sekolah/public/images/hero.avif');
     animation-delay: 1s;
     opacity: 1;
   }
 
   /* Gambar kedua */
   .bg-slideshow::after {
-    background-image: url('{{ asset('images/pp1.webp') }}');
+    background-image: url('/web_sekolah/public/images/pp1.webp');
     animation-delay: 3.5s;
   }
 
   /* Gambar ketiga */
   .bg-slideshow .bg2 {
-    background-image: url('{{ asset('images/pp2.webp') }}');
+    background-image: url('/web_sekolah/public/images/pp2.webp');
     animation-delay: 7s;
   }
 
   /* Gambar keempat */
   .bg-slideshow .bg3 {
-    background-image: url('{{ asset('images/pp3.webp') }}');
+    background-image: url('/web_sekolah/public/images/pp3.jpg');
     animation-delay: 10s;
   }
 
@@ -163,8 +167,8 @@
   @section('content')
   <!-- ====== Hero Section ======== -->
   <section id="Beranda"
-    class="bg-slideshow relative py-[20%] md:py-[30%] md:h-screen bg-cover bg-center flex items-center"
-    style="background-image: url('{{ asset('images/hero.avif') }}');">
+    class="bg-slideshow relative py-[15%] sm:py-[8%] md:py-[10%] lg:py-[30%] lg:h-screen bg-cover bg-center flex items-center"
+    style="background-image: url('/web_sekolah/public/images/hero.avif');">
 
     <!-- Layer tambahan untuk fade animasi -->
     <div class="bg2"></div>
@@ -175,12 +179,12 @@
 
     <!-- Content -->
     <div class="relative z-10 py-[13%] max-w-4xl px-5 md:px-10 mt-5 text-white">
-      <h3 class="text-xl font-semibold">SMK NURUL IMAN</h3>
-      <h1 class="text-[3rem] md:text-[5rem] leading-[1.2] font-extrabold mt-2">
-        BELAJAR <span class="text-[#fed700]">NYATA</span><br>
-        <span class="text-[#fed700]">KARYA</span> NYATA
+      <h3 class="text-sm mx:text-xl font-semibold"  data-aos="fade-down" data-aos-duration="1000">BELAJAR NYATA KARYA NYATA</h3>
+      <h1  data-aos="fade-right" data-aos-duration="1000" class="text-[3rem] text-white md:text-[5rem] leading-[1.2] font-extrabold mt-2">
+        SMK <span class="text-[#fed700]">NURUL</span> 
+        <span class="text-[#fed700]">IMAN</span> JAKARTA
       </h1>
-      <p class="mt-4 text-[12px] md:text-[17px] text-gray-200 max-w-2xl">
+      <p  data-aos="fade-up" data-aos-duration="1000" class="mt-4 text-[12px] md:text-[17px] text-gray-200 max-w-2xl">
         Jl. Pisangan Baru Timur No.4A, RT.4/RW.9, Pisangan Baru, Kec. Matraman, Kota Jakarta Timur, Daerah
         Khusus Ibukota Jakarta 13110
       </p>
@@ -227,32 +231,32 @@
 
   <!-- ===== about section ====== -->
   <section class="py-6 md:py-16 mt-4 px-6 bg-white md:px-10" id="about" data-aos="fade-up" data-aos-duration="1000">
-    <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
       <!-- Kolom Kiri (Gambar) -->
       <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-4">
+        <div class="flex h-full flex-col gap-4">
           @forelse ($profile as $img)
-          <img src="{{ asset('storage/' . $img->profile_img1) }}" loading="lazy" alt="SMK NURUL IMAN"
-            class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
+          <img src="/web_sekolah/public/storage/{{ $img->profile_img1 }}" loading="lazy" alt="SMK NURUL IMAN"
+            class="rounded-lg shadow-lg object-cover flex-1 h-full">
           @empty
-          <img src="{{ asset('images/pp3.jpg') }}" loading="lazy" alt="SMK NURUL IMAN"
-            class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
+          <img src="/web_sekolah/public/images/pp3.jpg" loading="lazy" alt="SMK NURUL IMAN"
+            class="rounded-lg shadow-lg object-cover w-full h-[190px] md:h-[220px]">
           @endforelse
           @forelse ($profile as $img)
-          <img src="{{ asset('storage/' . $img->profile_img2) }}" loading="lazy" alt="SMK NURUL IMAN"
-            class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
+          <img src="/web_sekolah/public/storage/{{ $img->profile_img2 }}" loading="lazy" alt="SMK NURUL IMAN"
+            class="rounded-lg shadow-lg object-cover flex-1 h-full">
           @empty
-          <img src="{{ asset('images/pp3.jpg') }}" loading="lazy" alt="SMK NURUL IMAN"
+          <img src="/web_sekolah/public/images/pp3.jpg" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
           @endforelse
         </div>
         <div>
           @forelse ($profile as $img)
-          <img src="{{ asset('storage/' . $img->profile_img3) }}" loading="lazy" alt="SMK NURUL IMAN"
+          <img src="/web_sekolah/public/storage/{{ $img->profile_img3 }}" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-full">
           @empty
-          <img src="{{ asset('images/pp3.jpg') }}" loading="lazy" alt="SMK NURUL IMAN"
+          <img src="/web_sekolah/public/images/pp3.jpg" loading="lazy" alt="SMK NURUL IMAN"
             class="rounded-lg shadow-lg object-cover w-full h-[180px] md:h-[220px]">
           @endforelse
         </div>
@@ -295,11 +299,23 @@
   <!-- ======== section info section ====== -->
   <section class="bg-white mx-auto px-6 md:px-10 py-6 md:pt-7 pb-10  bg-cover bg-center bg-scroll md:bg-fixed"
     id="berita"
-    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/pp1.webp') }}');">
+    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/web_sekolah/public/images/pp1.webp');">
     <div data-aos="fade-up" data-aos-duration="1000"><!-- bungkusan buat animasi -->
-      <h2 class="text-white text-center md:text-left text-3xl md:text-5xl font-extrabold mb-5">ARTIKEL & BERITA
-      </h2>
-      <p class="text-white text-center md:text-left mb-4">Seputar Artikel dan Pengumuman Smk Nurul Iman</p>
+     <div class="flex justify-between mb-6 items-center flex-col md:flex-row">
+        <div>
+        <h2 class="text-white text-center md:text-left text-3xl md:text-5xl font-extrabold mb-5">ARTIKEL</h2>
+        <p class="text-white text-center md:text-left mb-4">Seputar Artikel dan Pengumuman Smk Nurul Iman</p>
+        </div>
+
+
+        <!-- BUTTON dekstop -->
+        <div class="hidden md:flex justify-center md:justify-start mb-6">
+          <a href="{{ route('all-artikel') }}"
+            class="hover:bg-yellow-500 border border-white text-white font-semibold px-4 md:px-8 py-2 rounded-lg transition">
+            Semua
+          </a>
+        </div>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-2 items-stretch">
 
@@ -310,7 +326,7 @@
           <div
             class="relative shadow rounded-lg overflow-hidden flex-shrink-0 w-full snap-start md:w-auto flex flex-col">
             <a href="{{ route('show-artikel', $artikel->slug) }}">
-              <img loading="lazy" src="{{ asset('storage/' . $artikel->cover_image) }}" alt="Prestasi"
+              <img loading="lazy" src="/web_sekolah/public/storage/{{ $artikel->cover_image }}" alt="Prestasi"
                 class="w-full h-48 object-cover">
               <!-- bayangan item di gambar nye -->
               <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
@@ -320,7 +336,7 @@
                   <span class="inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded">{{
                     $artikel->category }}</span>
                 </div>
-                <h3 class="text-lg font-semibold">{{ $artikel->title }}</h3>
+                <h3 class="text-lg font-semibold line-clamp-2">{{ $artikel->title }}</h3>
                 <p class="text-sm text-white mt-auto">{{
                   $artikel->created_at->translatedFormat('j F Y') }}</p>
               </div>
@@ -333,7 +349,7 @@
           <div
             class="relative shadow rounded-lg overflow-hidden flex-shrink-0 w-full snap-start md:w-auto flex flex-col">
             <a href="{{ route('show-artikel', $artikel->slug) }}">
-              <img loading="lazy" src="{{ asset('storage/' . $artikel->cover_image) }}" alt="Kegiatan"
+              <img loading="lazy" src="/web_sekolah/public/storage/{{ $artikel->cover_image }}" alt="Kegiatan"
                 class="w-full h-48 object-cover">
               <!-- bayangan item di gambar nye -->
               <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
@@ -343,7 +359,7 @@
                   <span class="inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded">{{
                     $artikel->category }}</span>
                 </div>
-                <h3 class="text-lg font-semibold">{{ $artikel->title }}</h3>
+                <h3 class="text-lg font-semibold line-clamp-2">{{ $artikel->title }}</h3>
                 <p class="text-sm text-white mt-auto">{{
                   $artikel->created_at->translatedFormat('j F Y') }}</p>
               </div>
@@ -357,7 +373,7 @@
         <a href="{{ route('show-artikel', $artikel->slug) }}">
           <div class="flex flex-col h-[180px] md:h-[392px] space-y-4">
             <div class="bg-white shadow rounded-lg overflow-hidden relative flex-1 flex flex-col">
-              <img src="{{ asset('storage/' . $artikel->cover_image) }}" alt="SPMB 2027"
+              <img src="/web_sekolah/public/storage/{{ $artikel->cover_image }}" alt="SPMB 2027"
                 class="w-full h-full object-cover">
               <!-- bayangan item di gambar nye -->
               <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
@@ -367,7 +383,7 @@
                   <span class="inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded">{{
                     $artikel->category }}</span>
                 </div>
-                <h3 class="mt-2 text-[15px] md:text-lg font-semibold">{{ $artikel->title }}</h3>
+                <h3 class="mt-2 text-[15px] md:text-lg font-semibold  line-clamp-2">{{ $artikel->title }}</h3>
                 <p class="text-sm text-white mt-auto">{{ $artikel->created_at->translatedFormat('j F Y')
                   }}</p>
               </div>
@@ -381,7 +397,7 @@
         <a href="{{ route('show-artikel', $artikel->slug) }}">
           <div class="flex flex-colh h-[180px] md:h-[392px] space-y-4">
             <div class="bg-white shadow rounded-lg overflow-hidden relative flex-1 flex flex-col">
-              <img src="{{ asset('storage/' . $artikel->cover_image) }}" alt="Umum" class="w-full h-full object-cover">
+              <img src="/web_sekolah/public/storage/{{ $artikel->cover_image }}" alt="Umum" class="w-full h-full object-cover">
               <!-- bayangan item di gambar nye -->
               <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
               <!-- bungkusan text -->
@@ -390,7 +406,7 @@
                   <span class="inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded">{{
                     $artikel->category }}</span>
                 </div>
-                <h3 class="mt-2 text-[15px] md:text-lg font-semibold">{{ $artikel->title }}</h3>
+                <h3 class="mt-2 text-[15px] md:text-lg font-semibold  line-clamp-2">{{ $artikel->title }}</h3>
                 <p class="text-sm text-white mt-auto">{{ $artikel->created_at->translatedFormat('j F Y')
                   }}</p>
               </div>
@@ -400,6 +416,14 @@
         @endforeach
 
       </div>
+      
+      <!-- BUTTON mobile-->
+        <div class="flex md:hidden justify-center md:justify-start mt-6 mb-6">
+          <a href="{{ route('all-artikel') }}"
+            class="hover:bg-yellow-500 border border-white text-white font-semibold px-4 md:px-8 py-2 rounded-lg transition">
+        Semua
+          </a>
+        </div>
     </div>
   </section>
   <br>
@@ -424,7 +448,7 @@
         @forelse ($eskul as $post)
         <div
           class="min-w-[250px] max-w-[250px] relative flex-shrink-0 mx-2 bg-[black] rounded-xl overflow-hidden shadow-lg">
-          <img src="{{ asset('storage/' . $post->gambar) }}" alt="Cocetta" class="w-full h-60 object-cover">
+          <img src="/web_sekolah/public/storage/{{ $post->gambar }}" loading="lazy" alt="EKSTRAKULIKULER" class="w-full h-60 object-cover">
           <div class="p-4">
             <h3 class="text-lg font-semibold">{{ $post->title }}</h3>
             <p class="text-sm text-gray-400">{{ $post->desc }}</p>
@@ -449,10 +473,10 @@
   <!-- ======= end eskul section ======== -->
 
   <!-- ======== section jurusan ======= -->
-  <section class="py-10  md:pb-10 px-6 md:px-12 bg-cover bg-scroll md:bg-fixed" id="jurusan"
-    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/pp1.webp') }}');">
+  <section class="py-10 md:pb-10 px-6 md:px-12 bg-cover bg-scroll md:bg-fixed" id="jurusan"
+    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/web_sekolah/public/images/pp1.webp');">
     <div data-aos="fade-up" data-aos-duration="1000"><!-- bungkusan buat animasi -->
-      <div class="relative z-10 max-w-7xl mx-auto text-center text-white">
+      <div class="relative z-10 mx-auto text-center text-white">
         <h2 class="text-3xl md:text-4xl font-extrabold mb-12">JURUSAN</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Card 1 -->
@@ -463,7 +487,7 @@
                 class="absolute text-[25px]  border-[3px] border-white border-solid top-[-6px] left-[-6px] bg-[rgba(0,0,0,0.5)] text-[#fed700] font-bold px-3 py-1 rounded-md">
                 PPLG
               </span>
-              <img src="{{ asset('images/jurusan/rpl.avif') }}" loading="lazy" alt="PPLG"
+              <img src="/web_sekolah/public/images/jurusan/rpl.avif" loading="lazy" alt="PPLG"
                 class="w-full h-80 bg-end bg-contain object-cover rounded-tr-[50px] border-4 border-white border-solid">
               <div class="p-2">
                 <h3 class="text-lg text-white font-bold uppercase">Pemrograman Prangkat Lunak dan Gim
@@ -480,7 +504,7 @@
                 class="absolute text-[25px]  border-[3px] border-white border-solid top-[-6px] left-[-6px] bg-[rgba(0,0,0,0.5)] text-[#fed700] font-bold px-3 py-1 rounded-md">
                 AKL
               </span>
-              <img src="{{ asset('images/jurusan/akl.avif') }}" loading="lazy" alt="AKL"
+              <img src="/web_sekolah/public/images/jurusan/akl.avif" loading="lazy" alt="AKL"
                 class="w-full h-80 bg-end bg-contain object-cover  rounded-bl-[50px] border-4 border-white border-solid">
               <div class="p-2">
                 <h3 class="text-lg text-white font-bold uppercase">Akutansi Keuangan Lembaga</h3>
@@ -496,7 +520,7 @@
                 class="absolute text-[25px] border-[3px] border-white border-solid top-[-6px] left-[-6px] bg-[rgba(0,0,0,0.5)] text-[#fed700] font-bold px-3 py-1 rounded-md">
                 MP
               </span>
-              <img src="{{ asset('images/jurusan/mp.avif') }}" loading="lazy" alt="MP"
+              <img src="/web_sekolah/public/images/jurusan/mp.avif" loading="lazy" alt="MP"
                 class="w-full h-80 bg-end bg-contain object-cover  rounded-tr-[50px] border-4 border-white border-solid">
               <div class="p-2">
                 <h3 class="text-lg text-white font-bold uppercase">Manajemen Perkantoran</h3>
@@ -531,7 +555,7 @@
           <article class="bg-white rounded-2xl shadow-md overflow-hidden">
             <div class="relative h-56 sm:h-60 md:h-64">
               @if ($prestasi && $post->gambar)
-                 <img src="{{ asset('storage/' . $post->gambar) }}" alt="SC. Mindanou" class="w-full h-full object-cover">
+                 <img src="/web_sekolah/public/storage/{{ $post->gambar }}" alt="Prestasi" class="w-full h-full object-cover">
               @else
                 <img src="https://png.pngtree.com/thumb_back/fw800/background/20220730/pngtree-bicolor-icon-set-guarantee-and-competition-success-icon-photo-image_19315762.jpg" alt="" class="w-full h-full object-cover">
               @endif
@@ -545,12 +569,12 @@
               <h3 class="text-base sm:text-lg font-semibold text-slate-800">{{ $post->title }}</h3>
               <p class="mt-2 text-sm text-slate-500 flex items-center gap-2">
                 <!-- simple location icon -->
-                <svg class="w-4 h-4 text-sky-500 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="currentColor" stroke-width="1.2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M19 11.5C19 16.5 12 21 12 21s-7-4.5-7-9.5a7 7 0 1 1 14 0z" stroke="currentColor"
-                    stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <!--<svg class="w-4 h-4 text-sky-500 flex-shrink-0" viewBox="0 0 24 24" fill="none">-->
+                <!--  <path d="M12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="currentColor" stroke-width="1.2"-->
+                <!--    stroke-linecap="round" stroke-linejoin="round" />-->
+                <!--  <path d="M19 11.5C19 16.5 12 21 12 21s-7-4.5-7-9.5a7 7 0 1 1 14 0z" stroke="currentColor"-->
+                <!--    stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />-->
+                <!--</svg>-->
                 {{ $post->deskripsi }}
               </p>
             </div>
@@ -568,47 +592,6 @@
   @endsection
 
   <script> // js ini sengaja di taruh di internal file karena kalau di taruh di file js nya itu bakal error di code nya !!
-    document.addEventListener('DOMContentLoaded', function () {
-      const isLoggedIn = @json(Auth:: check());
-      const loginUrl = "{{ route('login.saran') }}";
-      let isAlertOpen = false; // untuk mencegah popup ganda
-
-      document.querySelectorAll('.input-protected').forEach(input => {
-        const handler = function (e) {
-          if (!isLoggedIn && !isAlertOpen) {
-            e.preventDefault();
-            isAlertOpen = true; // tandai sedang ada popup
-
-            if (typeof Swal !== 'undefined') {
-              Swal.fire({
-                icon: 'info',
-                title: 'Login Diperlukan',
-                text: 'Silakan login atau register dengan akun Google untuk melanjutkan.',
-                showCancelButton: true,
-                confirmButtonText: 'Register',
-                cancelButtonText: 'Batal',
-                reverseButtons: true,
-                allowOutsideClick: false,
-              }).then((result) => {
-                isAlertOpen = false; // popup ditutup, reset flag
-                if (result.isConfirmed) {
-                  window.location.href = loginUrl;
-                }
-              });
-            } else {
-              const confirmLogin = confirm('Silakan login untuk melanjutkan. Klik OK untuk login, atau Cancel untuk batal.');
-              isAlertOpen = false;
-              if (confirmLogin) {
-                window.location.href = loginUrl;
-              }
-            }
-          }
-        };
-
-        input.addEventListener('click', handler);
-      });
-    });
-
     document.addEventListener('DOMContentLoaded', () => {
       const carousel = document.getElementById('carousel');
       const nextBtn = document.getElementById('nextBtn');

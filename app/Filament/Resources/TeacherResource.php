@@ -41,6 +41,18 @@ class TeacherResource extends Resource
                 ->required()
                 ->placeholder('Title guru misal guru mapel apa')
                 ->maxLength(255),
+                
+            Forms\Components\Select::make('kategori')
+            ->label('Pilih Jurusan')
+            ->required()
+            ->options([
+             'rpl' => 'rpl',
+             'mp' => 'mp',
+             'akl' => 'akl',
+             'umum' => 'umum',
+             'pimpinan' => 'pimpinan',
+             ]),
+            
 
             Forms\Components\FileUpload::make('image')
                 ->image()
@@ -55,8 +67,7 @@ class TeacherResource extends Resource
                  } else {
                  Log::warning('File belum tersimpan atau tidak ditemukan: ' . $state);
                  }
-                 })
-                ->required(),
+                 }),
         ]);
     }
 

@@ -6,7 +6,7 @@ use App\Http\Controllers\SaranController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\Auth\GoogleController;
-use App\Http\Controllers\ShowartikelController;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\ProfilsekolahController;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,12 +17,13 @@ Route::get('/', [BerandaController::class, 'homepage_category']);
 Route::middleware(['auth'])->group(function () {
     Route::post('/saran/kirim', [SaranController::class, 'store'])->name('saran.kirim');
 });
-Route::get('/login', [GoogleController::class, 'login'])->name('login.saran'); // Google OAuth
-Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('Auth.google');
-Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+//Route::get('/login', [GoogleController::class, 'login'])->name('login.saran'); // Google OAuth
+//Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('Auth.google');
+//Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 // ===== Route page show artikel berita ======= //
-Route::get('/posts/{slug}', [ShowartikelController::class, 'show'])->name('show-artikel');
+Route::get('/posts/{slug}', [ArtikelController::class, 'show'])->name('show-artikel');
+Route::get('/artikel-Sekolah', [ArtikelController::class, 'all'])->name('all-artikel');
 
 // ===== Route page SPMB ======= //
 Route::get('/pendaftaran-spmb', [SpmbController::class,  'index'])->name('formulir.spmb');
@@ -31,6 +32,8 @@ Route::post('/pendaftaran-spmb/store', [SpmbController::class, 'store'])->name('
 // ==========  route profil sekolah  ========= //
 Route::get('/profile-sekolah', [ProfilsekolahController::class, 'index'])->name('profile-sekolah');
 
-// ==========  route profil sekolah  ========= //
+// ==========  route jurusan sekolah  ========= //
 Route::get('/jurusan', [JurusanController::class, 'index']);
+
+
 

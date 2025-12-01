@@ -10,6 +10,7 @@ class Teacher extends Model
     protected $fillable = [
         'name',
         'title',
+        'kategori',
         'image',
     ];
 }

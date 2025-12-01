@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet" />
 </head>
@@ -27,16 +26,16 @@
             </div>
         </div>
         <!-- Hamburger button for mobile -->
-        <button aria-expanded="false" aria-label="Toggle menu" class="md:hidden relative w-8 h-8 focus:outline-none"
+        <button aria-expanded="false" aria-label="Toggle menu" class="lg:hidden relative w-8 h-8 focus:outline-none"
             id="menu-btn">
-            <span class="block absolute h-0.5 w-6 bg-white rounded left-1 top-2 transition-transform duration-300">
+            <span class="border-nav block absolute h-0.5 w-6 bg-white rounded left-1 top-2 transition-transform duration-300">
             </span>
-            <span class="block absolute h-0.5 w-4 bg-white rounded right-1 top-4.5 transition-opacity duration-300">
+            <span class="border-nav block absolute h-0.5 w-4 bg-white rounded right-1 top-4.5 transition-opacity duration-300">
             </span>
-            <span class="block absolute h-0.5 w-6 bg-white rounded left-1 top-6 transition-transform duration-300">
+            <span class="border-nav block absolute h-0.5 w-6 bg-white rounded left-1 top-6 transition-transform duration-300">
             </span>
         </button>
-        <nav class="hidden md:flex text-white items-center space-x-6 text-[15px] font-normal" id="menu">
+        <nav class="hidden lg:flex text-white items-center space-x-6 text-[15px] font-normal" id="menu">
             <a class="hover:text-[#fed700] whitespace-nowrap" href="/#Beranda">
                 Beranda
             </a>
@@ -252,7 +251,7 @@
 
     <!-- ======= footer ======= -->
     <footer class="bg-[black] text-white px-6 md:px-10 py-12">
-        <div class="max-w-7xl mx-auto">
+        <div class="mx-auto">
             <!-- Garis atas -->
             <div class="pt-4 md:pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
 

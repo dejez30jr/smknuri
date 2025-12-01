@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Teacher;
+use App\Models\Staff;
 use App\Models\homepages;
 use Illuminate\Http\Request;
 
@@ -27,8 +28,12 @@ class ProfilsekolahController extends Controller
         $umum = Teacher::where( 'kategori', 'umum' )
         ->latest()
         ->get();
+        $tendik = Teacher::where( 'kategori', 'tendik' )
+        ->latest()
+        ->get();
         $homepage = homepages::all(); // ini di panggil di page profil karena page profil ada footer yang data nya dinamis/bisa di ubah make cms
+        $tendik = Staff::all();
 
-        return view('pages.page_profil.profil-sekolah', compact('guru', 'homepage', 'pimpinan', 'rpl', 'akl', 'mp', 'umum'));
+        return view('pages.page_profil.profil-sekolah', compact('guru', 'homepage', 'pimpinan', 'rpl', 'akl', 'mp', 'umum', 'tendik'));
     }
 }

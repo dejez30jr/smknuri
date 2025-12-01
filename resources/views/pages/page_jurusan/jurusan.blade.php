@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akuntansi Keuangan Lembaga (AKL)</title>
+    <title>Kejuruhan | SMK Nurul Iman</title>
     <link rel="icon" href="{{ asset('images/logo.webp') }}" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -61,7 +61,7 @@
                             class="absolute -right-8 -top-8 w-[320px] h-[320px] rounded-full bg-white/5 blur-3xl hidden md:block">
                         </div>
                         <!-- gambar utama -->
-                        <img src="images/jurusan/herojurus.png" alt="Siswa tersenyum - Hero"
+                        <img src="/web_sekolah/public/images/jurusan/herojurus.png" alt="Siswa tersenyum - Hero"
                             class="relative w-full h-[300px] md:h-[600px] md:translate-y-[50px] md:scale-[1.2] object-contain drop-shadow-2xl" />
                     </div>
                 </div>
@@ -84,7 +84,7 @@
             <div
                 class="h-[150%] w-[100px] md:w-[180px] absolute top-[-200px] md:top-[-250px] left-[90px] md:left-[90px] rotate-[45deg] bg-[#1b2a3b] z-3">
             </div>
-            <img src="{{ asset('images/jurusan/rpl.avif') }}" alt="gedung"
+            <img src="/web_sekolah/public/images/jurusan/rpl.avif" alt="rpl"
                 class="rounded-lg shadow-lg max-h-[100%] w-[400px] object-cover relative z-5">
         </div>
 
@@ -98,15 +98,7 @@
             <div class="w-20 h-1 bg-black mb-4"></div>
             <br>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Jurusan ini membekali siswa dengan kemampuan merancang, mengembangkan, menguji, dan memelihara perangkat
-                lunak yang berkualitas tinggi
-                dan memenuhi kebutuhan pengguna.Ketiga jurusan ini dapat membuka peluang karir yang luas di bidang
-                keuangan, teknologi informasi, dan industri kreatif.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Buat masa depanmu dengan kode! Di jurusan RPL, kamu akan belajar membangun aplikasi, website, dan sistem
-                digital yang digunakan jutaan orang. Cocok untuk kamu yang suka teknologi, logika, dan ingin jadi
-                developer handal.
+             Jurusan RPL mempelajari cara merancang, membuat, dan mengembangkan perangkat lunak. Di era digital seperti sekarang, kebutuhan tenaga kerja di dunia teknologi terus meningkat, menjadikan RPL salah satu jurusan paling diminati. RPL membentuk siswa yang kreatif, logis, dan mampu menghadapi perkembangan teknologi masa depan.
             </p>
         </div>
     </section>
@@ -126,14 +118,8 @@
             </h2>
             <div class="w-20 h-1 bg-black mb-4"></div>
             <br>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                Jurusan ini membekali siswa dengan kemampuan mengelola dan menganalisis data keuangan, menyusun laporan
-                keuangan, dan membuat keputusan berdasarkan data keuangan.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Siap jadi tulang punggung perusahaan? Jurusan MP membekalimu dengan skill administrasi, komunikasi
-                bisnis, dan pengelolaan dokumen profesional. Cocok untuk kamu yang teliti, rapi, dan ingin bekerja di
-                dunia perkantoran modern.
+                <p class="text-gray-700 leading-relaxed mb-4">
+              Jurusan Akuntansi cocok untuk siswa yang teliti, suka berhitung, dan ingin berkarier di bidang administrasi keuangan. Selain memahami teori akuntansi, siswa juga dilatih menggunakan perangkat lunak keuangan modern. akuntansi memiliki peluang besar bekerja di perusahaan, kantor pemerintahan, lembaga keuangan, hingga membuka usaha sendiri.
             </p>
         </div>
 
@@ -145,7 +131,7 @@
             <div
                 class="md:h-[150%] h-[160%] w-[100px] md:w-[180px] absolute top-[-240px] md:top-[-250px] right-[100px] md:right-[90px] rotate-[-45deg] bg-[#1b2a3b] z-3">
             </div>
-            <img src="{{ asset('images/jurusan/akl.avif') }}" alt="gedung"
+            <img src="/web_sekolah/public/images/jurusan/akl.avif" alt="akl"
                 class="rounded-lg shadow-lg max-h-[100%] w-[400px] object-cover relative z-5">
         </div>
     </section>
@@ -162,7 +148,7 @@
             <div
                 class="h-[150%] w-[100px] md:w-[180px] absolute top-[-160px] md:top-[-250px] left-[50px] md:left-[90px] rotate-[45deg] bg-[#1b2a3b] z-3">
             </div>
-            <img src="{{ asset('images/jurusan/mp.avif') }}" alt="gedung"
+            <img src="/web_sekolah/public/images/jurusan/mp.avif" alt="mp"
                 class="rounded-lg shadow-lg max-h-[100%] w-[400px] object-cover relative z-5">
         </div>
 
@@ -175,14 +161,9 @@
             </h2>
             <div class="w-20 h-1 bg-black mb-4"></div>
             <br>
+            
             <p class="text-gray-700 leading-relaxed mb-4">
-                Jurusan ini membekali siswa dengan kemampuan mengelola dan menganalisis data keuangan, menyusun laporan
-                keuangan, dan membuat keputusan berdasarkan data keuangan.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Angka adalah kekuatanmu! Di jurusan AKL, kamu akan belajar mengelola keuangan, membuat laporan
-                akuntansi, dan memahami alur bisnis. Cocok untuk kamu yang detail, logis, dan ingin berkarier di bidang
-                keuangan.
+             Jurusan Manajemen Perkantoran mempelajari keterampilan administrasi dan pelayanan profesional dalam dunia kerja. Jurusan ini sangat dibutuhkan di berbagai sektor karena hampir semua instansi membutuhkan tenaga administrasi. Lulusan MP dikenal rapi, komunikatif, dan cakap dalam pengelolaan informasi.
             </p>
         </div>
     </section>

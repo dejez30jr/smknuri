@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 navLinks.forEach((link) => {
                     link.classList.remove("text-orange-500", "font-semibold");
                     link.classList.add("text-white"); // default nav link putih
-                    if (link.getAttribute("href").includes(sectionId)) {
+                    if (link.getAttribute("href").includes(sectionId)) {c
                         link.classList.remove("text-white");
                         link.classList.add("text-[#fed700]", "font-semibold");
                     }

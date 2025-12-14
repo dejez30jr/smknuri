@@ -22,7 +22,7 @@
         <div class="flex items-center space-x-2">
             <div class="flex gap-4 items-center">
                 <img src="/web_sekolah/public/images/logo.webp" alt="SMK NURUL IMAN" class="w-[50px]">
-                <h1 class="text-[20px] text-white font-bold hidden md:block">SMK NURUL IMAN</h1>
+                <h1 class="text-[20px] xl:text-[1.5rem] text-white font-bold hidden md:block">SMK NURUL IMAN</h1>
             </div>
         </div>
         <!-- Hamburger button for mobile -->
@@ -242,6 +242,9 @@
                 </div>
             </div>
         </ul>
+        <div class="absolute bottom-4 text-center w-full px-2">
+             <span class=" text-sm text-gray-500 "> © 2024 Created By Genfirst <span id="rplBtn" ><u>deris, azzam, pahri</u></span></span>
+        </div>
     </nav>
     <!-- ======== navbar/header endddd ========== -->
 

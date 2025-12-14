@@ -43,7 +43,7 @@
 
     @section('content')
     <!-- ========= section detail artikel ======== -->
-    <section class="bg-white md:px-10 p-6 max-w-7xl mx-auto pt-[8px]">
+    <section class="bg-white md:px-10 p-6 md:px-16 mx-auto pt-[8px]">
         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
             <!-- <h1 class="text-4xl font-normal max-w-full md:max-w-[50%]">
                 Detail article

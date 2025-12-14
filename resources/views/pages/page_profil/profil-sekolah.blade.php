@@ -374,9 +374,9 @@
 
             <!-- BAGIAN KONTEN -->
             <div class="bg-white">
-            <section class="relative md:px-16 pt-6 md:pt-16 -mt-[20px] md:-mt-0 bg-white rounded-t-3xl">
-              <!-- navigasi -->
-            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-6 pt-6 md:pt-0 md:px-16 bg-white">
+            <section class="relative md:px-16 pt-6 md:pt-8 -mt-[20px] md:-mt-0 bg-white rounded-t-3xl">
+            <!-- navigasi -->
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 pt-6 md:pt-0 bg-white">
 
                 <div>
                     <span class="flex items-center text-sm md:text-base">
@@ -401,10 +401,10 @@
 
             </div>
             <!-- navigasi end -->
-
+            <!--isi sambutan-->
             <section
-                    class="relative bg-white px-6 md:px-16 py-12 md:py-16 leading-relaxed text-gray-800">
-                    <div class="mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-6 items-center">
+                    class="relative bg-white py-12 leading-relaxed text-gray-800">
+                    <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 items-center">
 
                         <!-- Kiri: Text -->
                         <div class="space-y-5">
@@ -427,6 +427,8 @@
                                 class="rounded-xl shadow-lg h-[250px] md:h-[500px] w-full max-w-md object-cover">
                         </div>
                     </div>
+                </section>
+                <!--isi sambutan end-->
                 </section>
             </div>
         </div>

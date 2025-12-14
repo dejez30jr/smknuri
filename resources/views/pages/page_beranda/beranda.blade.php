@@ -178,9 +178,9 @@
     <div class="absolute inset-0 bg-black/50 overlay"></div>
 
     <!-- Content -->
-    <div class="relative z-10 py-[13%] max-w-4xl px-5 md:px-10 mt-5 text-white">
-      <h3 class="text-sm mx:text-xl font-semibold"  data-aos="fade-down" data-aos-duration="1000">BELAJAR NYATA KARYA NYATA</h3>
-      <h1  data-aos="fade-right" data-aos-duration="1000" class="text-[3rem] text-white md:text-[5rem] leading-[1.2] font-extrabold mt-2">
+    <div class="relative z-10 py-[13%] max-w-6xl px-5 md:px-10 mt-5 text-white">
+      <h3 class="text-sm mx:text-xl xl:text-[1.7rem] font-semibold"  data-aos="fade-down" data-aos-duration="1000">BELAJAR NYATA KARYA NYATA</h3>
+      <h1  data-aos="fade-right" data-aos-duration="1000" class="text-[3rem] text-white md:text-[5rem] xl:text-[6.5rem] leading-[1.2] font-extrabold mt-2">
         SMK <span class="text-[#fed700]">NURUL</span> 
         <span class="text-[#fed700]">IMAN</span> JAKARTA
       </h1>
@@ -418,7 +418,7 @@
       </div>
       
       <!-- BUTTON mobile-->
-        <div class="flex md:hidden justify-center md:justify-start mt-6 mb-6">
+        <div class="flex md:hidden justify-center md:justify-start mt-6 mb-2">
           <a href="{{ route('all-artikel') }}"
             class="hover:bg-yellow-500 border border-white text-white font-semibold px-4 md:px-8 py-2 rounded-lg transition">
         Semua
@@ -430,7 +430,7 @@
   <!-- ======= section info end ========= -->
 
   <!-- ======== eskul section ========= -->
-  <section class="bg-white text-white md:px-4 mx:pt-[25px] pb-6" id="eskul">
+  <section class="bg-white text-white mx:pt-[25px] pb-6" id="eskul">
     <div class="">
     <h2 class="text-3xl md:text-4xl font-extrabold font-bold text-black text-center mb-10">EKSTRAKULIKULER</h2>
     </div>
@@ -443,11 +443,11 @@
       </button>
 
       <!-- Wrapper Carousel -->
-      <div id="carousel" class="flex px-4 overflow-auto md:overflow-hidden scroll-smooth">
+     <div id="carousel" class="flex px-4 overflow-auto md:overflow-hidden scroll-smooth snap-x snap-mandatory">
         <!-- Card -->
         @forelse ($eskul as $post)
         <div
-          class="min-w-[250px] max-w-[250px] relative flex-shrink-0 mx-2 bg-[black] rounded-xl overflow-hidden shadow-lg">
+          class="min-w-[250px] max-w-[250px] relative flex-shrink-0 mx-[2px] md:mx-2 bg-[black] rounded-xl overflow-hidden shadow-lg transition-transform duration-300 snap-center">
           <img src="/web_sekolah/public/storage/{{ $post->gambar }}" loading="lazy" alt="EKSTRAKULIKULER" class="w-full h-60 object-cover">
           <div class="p-4">
             <h3 class="text-lg font-semibold">{{ $post->title }}</h3>
@@ -592,21 +592,80 @@
   @endsection
 
   <script> // js ini sengaja di taruh di internal file karena kalau di taruh di file js nya itu bakal error di code nya !!
-    document.addEventListener('DOMContentLoaded', () => {
-      const carousel = document.getElementById('carousel');
-      const nextBtn = document.getElementById('nextBtn');
-      const prevBtn = document.getElementById('prevBtn');
+ //  =========== section eskul ============ //
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.getElementById('carousel');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
 
-      const cardWidth = 250 + 16;
+  const cardWidth = 250 + 16; // width card + margin
 
-      nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      });
+  // ============================
+  //  AUTO SCROLL KE CARD TENGAH
+  // ============================
+  const cards = carousel.children;
+  const total = cards.length;
 
-      prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-      });
+  if (total > 0) {
+    const middleIndex = Math.floor(total / 2);
+    const middleCard = cards[middleIndex];
+
+    const offsetLeft =
+      middleCard.offsetLeft -
+      (carousel.clientWidth / 2) +
+      (middleCard.clientWidth / 2);
+
+    carousel.scrollTo({ left: offsetLeft, behavior: 'smooth' });
+  }
+
+  // ============================
+  // TOMBOL NEXT / PREV
+  // ============================
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+
+  // ============================
+  // EVENT UNTUK SCALE CARD TENGAH
+  // ============================
+  function updateCenterScale() {
+    if (window.innerWidth >= 768) return; // hanya mobile
+
+    const center = carousel.scrollLeft + (carousel.clientWidth / 2);
+
+    let closestCard = null;
+    let closestDistance = Infinity;
+
+    Array.from(cards).forEach(card => {
+      const cardCenter = card.offsetLeft + (card.clientWidth / 2);
+      const distance = Math.abs(center - cardCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestCard = card;
+      }
     });
+
+    Array.from(cards).forEach(card => {
+      if (card === closestCard) {
+        card.style.transform = "scale(1)";        // card terpilih
+      } else {
+        card.style.transform = "scale(0.9)";      // card lain mengecil
+      }
+    });
+  }
+
+  // Jalankan efek scale
+  carousel.addEventListener('scroll', updateCenterScale);
+  window.addEventListener('load', updateCenterScale);
+  window.addEventListener('resize', updateCenterScale);
+});
+// =============== end section eskul ==============//
+
 
   </script>
 

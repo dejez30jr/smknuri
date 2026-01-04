@@ -199,7 +199,7 @@
                         <h2
                             class="text-[15px] md:text-2xl font-bold mb-4 bg-[#283747] rounded-br-2xl p-4 w-[fit-content] text-white">
                             Pimpinan Sekolah</h2>
-                        <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-2 md:gap-4 ">
+                        <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 ">
                             @foreach ($pimpinan as $post)
                             <div class="bg-white flex flex-col shadow-md gap-2 md:gap-4 overflow-hidden text-center transition">
                                 <div class="p-3 bg-[#283747] text-white">
@@ -404,7 +404,7 @@
             <!--isi sambutan-->
             <section
                     class="relative bg-white py-12 leading-relaxed text-gray-800">
-                    <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 items-center">
+                    <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 items-center">
 
                         <!-- Kiri: Text -->
                         <div class="space-y-5">
@@ -422,7 +422,7 @@
                         </div>
 
                         <!-- Kanan: Gambar -->
-                        <div class="flex justify-center md:justify-end mb-6 md:mb-0">
+                        <div class="flex justify-center lg:justify-end mb-6 md:mb-0">
                             <img src="https://smknuruliman.sch.id/web_sekolah/public/storage/teachers/01KADMERQAF4V30V41QM43C38R.JPG" alt="Gedung Sekolah"
                                 class="rounded-xl shadow-lg h-[250px] md:h-[500px] w-full max-w-md object-cover">
                         </div>

@@ -151,6 +151,7 @@
   /* ======== end ======= */
 </style>
 <body class="font-sans">
+  <!-- ====== alert notifikasi ====== -->
   @if(session('success'))
   <script>
     Swal.fire({
@@ -163,6 +164,7 @@
   </script>
   @endif
   @extends('layouts.app')
+  <!-- ===== alert end ====== -->
 
   @section('content')
   <!-- ====== Hero Section ======== -->
@@ -200,29 +202,29 @@
   <section
     class="rounded-t-[20px] md:rounded-t-[0px] mt-[-20px] relative bg-white z-20 flex justify-center md:justify-end">
     <div
-      class="min-w-[100%] md:min-w-[0px] md:max-w-4xl mt-[-35px] md:mt-[-80px] grid grid-cols-4 gap-2 md:gap-6 px-6 md:px-6">
+      class="min-w-[100%] md:min-w-[0px] lg:max-w-4xl mt-[-35px] md:mt-[-80px] grid grid-cols-4 gap-2 md:gap-6 px-6 md:px-6">
       <!-- Box 1 -->
-      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-5 rounded-lg shadow-lg">
+      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-2 md:px-4 lg:p-5 rounded-lg shadow-lg">
         <h2 class="text-[23px] md:text-[3rem] font-bold">35+</h2>
-        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[2rem] font-bold font-semibold">
+        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[1.5rem] lg:text-[2rem] font-bold font-semibold">
           YEARS</p>
       </div>
       <!-- Box 2 -->
-      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-5 rounded-lg shadow-lg">
+      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-2 md:px-4 lg:p-5 rounded-lg shadow-lg">
         <h2 class="text-[23px] md:text-[3rem] font-bold">{{ $countGuru}}+</h2>
-        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[2rem] font-bold font-semibold">
+        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[1.5rem] lg:text-[2rem] font-bold font-semibold">
           TEACHER</p>
       </div>
       <!-- Box 3 -->
-      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-5 rounded-lg shadow-lg">
+      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-2 md:px-4 lg:p-5 rounded-lg shadow-lg">
         <h2 class="text-[20px] md:text-[3rem] font-bold">200</h2>
-        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[2rem] font-bold font-semibold">
+        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[1.5rem] lg:text-[2rem] font-bold font-semibold">
           STUDENT</p>
       </div>
       <!-- Box 4 -->
-      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-5 rounded-lg shadow-lg">
+      <div class="bg-white border-2 border-black border-solid text-center p-[4px] md:p-2 md:px-4 lg:p-5 rounded-lg shadow-lg">
         <h2 class="text-[23px] md:text-[3rem] font-bold">{{ $countStaff }}+</h2>
-        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[2rem] font-bold font-semibold">
+        <p class="mt-[1px] md:mt-[-10px] text-green-500 text-[10px] md:text-[1.5rem] lg:text-[2rem] font-bold font-semibold">
           STAFF</p>
       </div>
     </div>
@@ -306,7 +308,6 @@
         <h2 class="text-white text-center md:text-left text-3xl md:text-5xl font-extrabold mb-5">ARTIKEL</h2>
         <p class="text-white text-center md:text-left mb-4">Seputar Artikel dan Pengumuman Smk Nurul Iman</p>
         </div>
-
 
         <!-- BUTTON dekstop -->
         <div class="hidden md:flex justify-center md:justify-start mb-6">
@@ -562,7 +563,7 @@
              
               <div
                 class="absolute top-3 right-3 bg-white/90 text-slate-700 rounded-full px-3 py-1 text-sm font-medium badge-sm shadow">
-                30 jun 2024
+                {{ $post->created_at->translatedFormat('j F Y') }}
               </div>
             </div>
             <div class="p-4">
@@ -591,7 +592,7 @@
   <!-- ======= End Contact Section ========== -->
   @endsection
 
-  <script> // js ini sengaja di taruh di internal file karena kalau di taruh di file js nya itu bakal error di code nya !!
+  <script> // js ini sengaja di taruh di inline file karena kalau di taruh di file js nya itu bakal error di code nya !!
  //  =========== section eskul ============ //
 document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.getElementById('carousel');
@@ -665,11 +666,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', updateCenterScale);
 });
 // =============== end section eskul ==============//
-
-
   </script>
 
-  <script src="{{ asset('js-beranda/beranda.js') }}"></script>
+  <!-- <script src="{{ asset('js-beranda/beranda.js') }}"></script> -->
 
   <!-- library animasi per section make AOS  -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

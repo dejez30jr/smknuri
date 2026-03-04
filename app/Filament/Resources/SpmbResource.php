@@ -26,9 +26,20 @@ class SpmbResource extends Resource {
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Spmb';
     
+    // hidde button create
+    public static function canCreate(): bool
+{
+    return false;
+}
+    // hidde button edit
+public static function canEdit($record): bool
+{
+    return false;
+}
+    
     public static function getPluralModelLabel(): string
     {
-    return 'spmb dalam tahap pengembangan ';
+    return 'Spmb';
     }
 
 
@@ -52,33 +63,7 @@ class SpmbResource extends Resource {
     public static function table( Table $table ): Table {
         return $table
         ->columns( [
-            TextColumn::make( 'full_name' )
-            ->label( 'Nama Lengkap' )
-            ->searchable()
-            ->sortable()
-            ->wrap(),
-
-            TextColumn::make( 'email' )
-            ->label( 'Email' )
-            ->toggleable(),
-
-            TextColumn::make( 'phone' )
-            ->label( 'No. HP / WhatsApp' )
-            ->toggleable(),
-
-            TextColumn::make( 'prev_school' )
-            ->label( 'Asal Sekolah' )
-            ->toggleable(),
-
-            TextColumn::make( 'nisn' )
-            ->label( 'NISN' )
-            ->searchable()
-            ->sortable(),
-
-            TextColumn::make( 'created_at' )
-            ->label( 'Tanggal Daftar' )
-            ->dateTime( 'd M Y H:i' )
-            ->sortable(),
+          
         ] )
 
         ->filters( [
@@ -119,7 +104,7 @@ class SpmbResource extends Resource {
     public static function getPages(): array {
         return [
             'index' => Pages\ListSpmbs::route( '/' ),
-            'create' => Pages\CreateSpmb::route( '/create' ),
+            // 'create' => Pages\CreateSpmb::route( '/create' ),
             'edit' => Pages\EditSpmb::route( '/{record}/edit' ),
         ];
     }

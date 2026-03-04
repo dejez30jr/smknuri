@@ -20,7 +20,7 @@
   <title>SMK Nurul Iman Jakarta</title>
   <!-- Deskripsi SEO -->
   <meta name="description"
-    content="SMK Nurul Iman adalah sekolah menengah kejuruan unggulan dengan jurusan Rekaya Perangkat Lunak, Manajemen Perkantoran dan Akuntansi Keuangan Lembaga, Daftar SPMB 2026 secara online dengan mudah.">
+    content="SMK Nurul Iman adalah sekolah menengah kejuruan unggulan dengan jurusan Rekayasa Perangkat Lunak, Manajemen Perkantoran dan Akuntansi Keuangan Lembaga, Daftar SPMB 2026 secara online dengan mudah.">
   <!-- Kata Kunci SEO -->
   <meta name="keywords"
     content="SMK Nurul Iman, SMK Nurul Iman jakarta, Sekolah Menengah Kejuruan, Pendaftaran SMK, SMK terbaik, SMK swasta, SPMB 2026, Rekaya Perangkat Lunak, Perkantoran, Akuntansi Keuangan Lembaga, sekolah unggulan, sekolah kejuruan, daftar sekolah menengah, SMK jakarta timur">

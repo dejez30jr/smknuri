@@ -54,12 +54,14 @@
         <p><span class="label">Email</span>: <span class="value">{{ $artikel->email }}</span></p>
         <p><span class="label">No. Telepon</span>: <span class="value">{{ $artikel->phone }}</span></p>
         <p><span class="label">Alamat</span>: <span class="value">{{ $artikel->address }}</span></p>
+        <p><span class="label">Kota</span>: <span class="value">{{ $artikel->kota }}</span></p>
+        <p><span class="label">Kecamatan</span>: <span class="value">{{ $artikel->kecamatan }}</span></p>
+        <p><span class="label">Kelurahan</span>: <span class="value">{{ $artikel->kelurahan }}</span></p>
         <div class="line"></div>
         <p><span class="label">Asal Sekolah</span>: <span class="value">{{ $artikel->prev_school }}</span></p>
         <p><span class="label">NISN</span>: <span class="value">{{ $artikel->nisn }}</span></p>
         <p><span class="label">Tahun Lulusan</span>: <span class="value">{{ $artikel->graduation_year }}</span></p>
         <p><span class="label">Jurusan yang Dipilih</span>: <span class="value">{{ $artikel->major }}</span></p>
-        <p><span class="label">Nilai Rata-rata</span>: <span class="value">{{ $artikel->avg_grade }}</span></p>
         <p><span class="label">Prestasi</span>: <span class="value">{{ $artikel->achievements ?? '-' }}</span></p>
         <p><span class="label">Nama Orang Tua</span>: <span class="value">{{ $artikel->parent_name }}</span></p>
         <div class="line"></div>

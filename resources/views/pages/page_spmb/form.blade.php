@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <form action="{{ route('Spmb.store') }}" method="POST" enctype="multipart/form-data" novalidate>
+  <form action="{{ route('Spmb.store') }}" method="POST" enctype="multipart/form-data" novalidate>
       @csrf
       <!-- Step 1 -->
       <fieldset data-step="1" class="step">
@@ -62,11 +62,11 @@
         <div class="grid grid-cols-1 gap-4">
           <div>
             <label class="block text-sm font-medium mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
-            <input name="full_name" required type="text" class="input w-full" placeholder="Nama lengkap sesuai KTP">
+            <input name="full_name" required type="text" class="input w-full" placeholder="Huruf Kapital">
             <p class="error text-xs text-red-500 mt-1 hidden"></p>
           </div>
 
-          <div class="flex gap-4">
+          <div class="flex-col md:flex gap-4">
             <div class="flex-1">
               <label class="block text-sm font-medium mb-1">Tempat Lahir <span class="text-red-500">*</span></label>
               <input name="birth_place" required type="text" class="input w-full" placeholder="Contoh: Jakarta">
@@ -78,6 +78,18 @@
               <p class="error text-xs text-red-500 mt-1 hidden"></p>
             </div>
           </div>
+          
+           <div>
+            <label class="block text-sm font-medium mb-1">No. HP / WhatsApp <span class="text-red-500">*</span></label>
+            <input name="phone" required type="tel" class="input w-full" placeholder="0812xxxx">
+            <p class="error text-xs text-red-500 mt-1 hidden"></p>
+          </div>
+          
+            <div>
+              <label class="block text-sm font-medium mb-1">Asal Sekolah <span class="text-red-500">*</span></label>
+              <input name="prev_school" required type="text" class="input w-full" placeholder="Nama sekolah">
+              <p class="error text-xs text-red-500 mt-1 hidden"></p>
+            </div>
 
           <div class="flex gap-4 items-end">
             <div class="w-1/2">
@@ -104,25 +116,33 @@
       <fieldset data-step="2" class="step hidden">
         <legend class="sr-only">Langkah 2</legend>
         <div class="grid grid-cols-1 gap-4">
-          <div>
-            <label class="block text-sm font-medium mb-1">No. HP / WhatsApp <span class="text-red-500">*</span></label>
-            <input name="phone" required type="tel" class="input w-full" placeholder="0812xxxx">
-            <p class="error text-xs text-red-500 mt-1 hidden"></p>
-          </div>
-
+         
           <div>
             <label class="block text-sm font-medium mb-1">Alamat Lengkap <span class="text-red-500">*</span></label>
             <input name="address" required type="text" class="input w-full" placeholder="Jalan / RT-RW / Kota">
             <p class="error text-xs text-red-500 mt-1 hidden"></p>
           </div>
+          
+          
+          <div>
+            <label class="block text-sm font-medium mb-1">Kota <span class="text-red-500">*</span></label>
+            <input name="kota" required type="text" class="input w-full" placeholder="Contoh Jakarta pusat">
+            <p class="error text-xs text-red-500 mt-1 hidden"></p>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium mb-1">Kecamatan <span class="text-red-500">*</span></label>
+            <input name="kecamatan" required type="text" class="input w-full" placeholder="Contoh Matraman">
+            <p class="error text-xs text-red-500 mt-1 hidden"></p>
+          </div>
 
-          <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium mb-1">Asal Sekolah <span class="text-red-500">*</span></label>
-              <input name="prev_school" required type="text" class="input w-full" placeholder="Nama sekolah">
+              <label class="block text-sm font-medium mb-1">Kelurahan <span class="text-red-500">*</span></label>
+              <input name="kelurahan" required type="text" class="input w-full" placeholder="Contoh Pisangan">
               <p class="error text-xs text-red-500 mt-1 hidden"></p>
             </div>
 
+          <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-1">NISN <span class="text-red-500">*</span></label>
               <input name="nisn" required type="text" class="input w-full" placeholder="Contoh: 0012345678">
@@ -143,20 +163,13 @@
         <legend class="sr-only">Langkah 3</legend>
         <div class="grid grid-cols-1 gap-4">
           <div>
-            <label class="block text-sm font-medium mb-1">Pilihan Program Studi <span class="text-red-500">*</span></label>
+            <label class="block text-sm font-medium mb-1">Pilihan jurusan <span class="text-red-500">*</span></label>
             <select name="major" required class="input w-full">
-              <option value="">Pilih program studi...</option>
-              <option value="Teknik Informatika">Teknik Informatika</option>
-              <option value="Manajemen">Manajemen</option>
-              <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-              <option value="Akuntansi">Akuntansi</option>
+              <option value="">Pilih jurusan...</option>
+              <option value="Rekayasa Perangkat lunak">Rekayasa Perangkat lunak</option>
+              <option value="Manajemen Perkantoran">Manajemen Perkantoran</option>
+              <option value="Akuntansi Keuangan Lembaga">Akuntansi Keuangan Lembaga</option>
             </select>
-            <p class="error text-xs text-red-500 mt-1 hidden"></p>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-1">Nilai Rata-rata Raport / UTBK</label>
-            <input name="avg_grade" type="text" class="input w-full" placeholder="Contoh: 85.5">
             <p class="error text-xs text-red-500 mt-1 hidden"></p>
           </div>
 

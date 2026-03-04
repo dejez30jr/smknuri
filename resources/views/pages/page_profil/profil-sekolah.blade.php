@@ -229,7 +229,7 @@
                                 @foreach ($rpl as $post)
                                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                                     <img src="/web_sekolah/public/storage/{{$post->image}}"
-                                        class="w-full h-[230px] md:h-[350px] object-cover">
+                                        class="w-full h-[230px] md:h-[350px] lg:h-[450px] object-cover">
                                     <div class="p-3">
                                         <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
                                         <p class="text-xs text-gray-600">{{ $post->title }}</p>
@@ -255,7 +255,7 @@
                                 @foreach ($mp as $post)
                                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                                     <img src="/web_sekolah/public/storage/{{$post->image}}"
-                                        class="w-full h-[230px] md:h-[300px] object-cover">
+                                        class="w-full h-[230px] md:h-[300px] lg:h-[500px] object-cover">
                                     <div class="p-3">
                                         <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
                                         <p class="text-xs text-gray-600">{{ $post->title }}</p>
@@ -281,7 +281,7 @@
                                 @foreach ($akl as $post)
                                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                                     <img src="/web_sekolah/public/storage/{{$post->image}}"
-                                        class="w-full h-[230px] md:h-[300px] object-cover">
+                                        class="w-full h-[230px] md:h-[300px] lg:h-[500px] object-cover">
                                     <div class="p-3">
                                         <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
                                         <p class="text-xs text-gray-600">{{ $post->title }}</p>
@@ -307,7 +307,7 @@
                                 @foreach ($umum as $post)
                                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                                     <img src="/web_sekolah/public/storage/{{$post->image}}"
-                                        class="w-full h-[230px] md:h-[300px] object-cover">
+                                        class="w-full h-[230px] md:h-[300px] lg:h-[500px] object-cover">
                                     <div class="p-3">
                                         <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
                                         <p class="text-xs text-gray-600">{{ $post->title }}</p>
@@ -333,7 +333,7 @@
                                 @foreach ($tendik as $post)
                                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                                     <img src="/web_sekolah/public/storage/{{$post->image}}"
-                                        class="w-full h-[230px] md:h-[300px] object-cover">
+                                        class="w-full h-[230px] md:h-[300px] lg:h-[500px] object-cover">
                                     <div class="p-3">
                                         <h3 class="text-sm font-semibold">{{ $post->name }}</h3>
                                         <p class="text-xs text-gray-600">{{ $post->title }}</p>

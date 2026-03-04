@@ -11,7 +11,7 @@ use App\Http\Controllers\ProfilsekolahController;
 use Illuminate\Support\Facades\Auth;
 
 // ===== route page beranda ===== //
-Route::get('/', [BerandaController::class, 'homepage_category']);
+Route::get('/', [BerandaController::class, 'homepage_category'])->name('beranda');
 
 // ========= Route page beranda | section kotak saran =========
 Route::middleware(['auth'])->group(function () {

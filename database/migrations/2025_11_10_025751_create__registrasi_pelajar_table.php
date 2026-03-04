@@ -13,27 +13,29 @@ return new class extends Migration
     {
         Schema::create('registrasi_pelajar', function (Blueprint $table) {
             $table->id();
-            
-            // Langkah 1
+          
             $table->string('full_name');
             $table->string('birth_place');
             $table->date('birth_date');
-            $table->enum('gender', ['Laki-laki', 'Perempuan', 'Lainnya']);
-            $table->string('email');
-
-            // Langkah 2
-            $table->string('phone');
-            $table->text('address');
+            $table->string('phone', 20);
             $table->string('prev_school');
-            $table->string('nisn')->unique();
+            $table->string('gender');
+            $table->string('email');
+            
+            $table->text('address');
+            $table->string('kecamatan');
+            $table->string('kelurahan');
+            $table->string('kota');
+
+            $table->string('nisn', 20)->unique();
             $table->year('graduation_year');
 
-            // Langkah 3
             $table->string('major');
-            $table->decimal('avg_grade', 5, 2)->nullable(); // misal nilai 85.50
             $table->text('achievements')->nullable();
             $table->string('parent_name');
-            $table->string('photo')->nullable(); // simpan nama file / path foto
+
+            $table->string('photo')->nullable();
+
 
             $table->timestamps();
         });

@@ -30,10 +30,10 @@
     <!-- ========= section jurusan ========== -->
     <!-- ======= banner ======== -->
     <section class="relative overflow-hidden hero-decor border-b-[20px] border-[#fed700] bg-[#1b2a3b]">
-        <div class="max-w-7xl mx-auto px-6 py-10 pt-[20%] md:pt-[5%] md:px-10 flex items-center flex-col-reverse md:flex-row gap-[10px] ">
+        <div class="max-w-[100%] mx-auto px-6 py-10 pt-[20%] md:pt-[5%] md:px-10 flex items-center justify-center flex-col-reverse md:flex-row gap-20 ">
 
                 <!-- Kiri: teks -->
-                <div class="flex items-center text-center md:text-left p-5">
+                <div class="flex items-center w-[70%] text-center md:text-left p-5">
                   <div>
                     <p class="text-white/80 uppercas text-sm mb-4">Welcome to Ademy School</p>
                     <h1 class="text-white font-extrabold leading-tight text-4xl sm:text-4xl md:text-7xl lg:text-7xl">
@@ -61,7 +61,7 @@
                             class="absolute -right-8 -top-8 w-[320px] h-[320px] rounded-full bg-white/5 blur-3xl hidden md:block">
                         </div>
                         <!-- gambar utama -->
-                        <img src="/web_sekolah/public/images/jurusan/herojurus.png" alt="Siswa tersenyum - Hero"
+                        <img src="https://smknuruliman.sch.id/web_sekolah/public/images/jurusan/herojurus.png" alt="Siswa tersenyum - Hero"
                             class="relative w-full h-[300px] md:h-[600px] md:translate-y-[50px] md:scale-[1.2] object-contain drop-shadow-2xl" />
                     </div>
                 </div>
@@ -82,10 +82,10 @@
                 class="h-[100%] w-[100px] md:w-[200px] border-r-[20px] border-[#fed700] absolute top-[-200px] md:top-[-300px] left-0 rotate-[45deg] md:rotate-[45deg] bg-[#1b2a3b] z-10">
             </div>
             <div
-                class="h-[150%] w-[100px] md:w-[180px] absolute top-[-200px] md:top-[-250px] left-[90px] md:left-[90px] rotate-[45deg] bg-[#1b2a3b] z-3">
+                class="h-[150%] w-[100px] md:w-[180px] absolute top-[-200px] md:top-[-250px] lg:top-[-300px] left-[90px] md:left-[90px]  lg:left-[120px] rotate-[45deg] bg-[#1b2a3b] z-3">
             </div>
-            <img src="/web_sekolah/public/images/jurusan/rpl.avif" alt="rpl"
-                class="rounded-lg shadow-lg max-h-[100%] w-[400px] object-cover relative z-5">
+            <img src="https://smknuruliman.sch.id/web_sekolah/public/images/jurusan/rpl.avif" alt="rpl"
+                class="rounded-lg shadow-lg max-h-[100%] object-cover relative z-5">
         </div>
 
         <!-- Bagian Kanan: Teks -->
@@ -129,10 +129,10 @@
                 class="h-[100%] w-[100px] md:w-[200px] border-l-[20px] border-[#fed700] absolute top-[-200px] md:top-[-300px] right-0 rotate-[-45deg] bg-[#1b2a3b] z-10">
             </div>
             <div
-                class="md:h-[150%] h-[160%] w-[100px] md:w-[180px] absolute top-[-240px] md:top-[-250px] right-[100px] md:right-[90px] rotate-[-45deg] bg-[#1b2a3b] z-3">
+                class="md:h-[150%] h-[160%] w-[100px] md:w-[180px] absolute top-[-240px] md:top-[-250px] lg:top-[-300px] right-[100px] md:right-[90px] lg:right-[120px] rotate-[-45deg] bg-[#1b2a3b] z-3">
             </div>
             <img src="/web_sekolah/public/images/jurusan/akl.avif" alt="akl"
-                class="rounded-lg shadow-lg max-h-[100%] w-[400px] object-cover relative z-5">
+                class="rounded-lg shadow-lg max-h-[100%] object-cover relative z-5">
         </div>
     </section>
     <!-- ========== end ========= -->
@@ -140,16 +140,16 @@
     <!-- ========= section mp ======== -->
     <section class="relative w-full min-h-screen grid grid-cols-1 md:grid-cols-2 overflow-hidden" id="mp">
 
-        <!-- Bagian Kiri: Foto -->
+            <!-- Bagian Kiri: Foto -->
         <div class="p-6 flex justify-center relative">
-           <div
+            <div
                 class="h-[100%] w-[100px] md:w-[200px] border-r-[20px] border-[#fed700] absolute top-[-200px] md:top-[-300px] left-0 rotate-[45deg] md:rotate-[45deg] bg-[#1b2a3b] z-10">
             </div>
             <div
-                class="h-[150%] w-[100px] md:w-[180px] absolute top-[-160px] md:top-[-250px] left-[50px] md:left-[90px] rotate-[45deg] bg-[#1b2a3b] z-3">
+                class="h-[150%] w-[100px] md:w-[180px] absolute top-[-200px] md:top-[-250px] lg:top-[-300px] left-[90px] md:left-[90px]  lg:left-[120px] rotate-[45deg] bg-[#1b2a3b] z-3">
             </div>
-            <img src="/web_sekolah/public/images/jurusan/mp.avif" alt="mp"
-                class="rounded-lg shadow-lg max-h-[100%] w-[400px] object-cover relative z-5">
+            <img src="https://smknuruliman.sch.id/web_sekolah/public/images/jurusan/rpl.avif" alt="rpl"
+                class="rounded-lg shadow-lg max-h-[100%] object-cover relative z-5">
         </div>
 
         <!-- Bagian Kanan: Teks -->

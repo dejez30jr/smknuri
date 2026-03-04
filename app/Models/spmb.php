@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Spmb extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
     protected $table = 'registrasi_pelajar';
 
@@ -15,15 +15,17 @@ class Spmb extends Model
         'full_name',
         'birth_place',
         'birth_date',
+        'phone',
+        'prev_school',
         'gender',
         'email',
-        'phone',
         'address',
-        'prev_school',
+        'kecamatan',
+        'kelurahan ',
+        'kota',
         'nisn',
         'graduation_year',
         'major',
-        'avg_grade',
         'achievements',
         'parent_name',
         'photo',

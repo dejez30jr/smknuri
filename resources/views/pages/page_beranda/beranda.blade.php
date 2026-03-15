@@ -182,7 +182,7 @@
     <!-- Content -->
     <div class="relative z-10 py-[13%] max-w-6xl px-5 md:px-10 mt-5 text-white">
       <h3 class="text-sm mx:text-xl xl:text-[1.7rem] font-semibold"  data-aos="fade-down" data-aos-duration="1000">BELAJAR NYATA KARYA NYATA</h3>
-      <h1  data-aos="fade-right" data-aos-duration="1000" class="text-[3rem] text-white md:text-[5rem] xl:text-[6.5rem] leading-[1.2] font-extrabold mt-2">
+      <h1  data-aos="fade-right" data-aos-duration="1000" class="text-[3rem] text-white md:text-[4.5rem] xl:text-[6.4rem] leading-[1.2] font-extrabold mt-2">
         SMK <span class="text-[#fed700]">NURUL</span> 
         <span class="text-[#fed700]">IMAN</span> JAKARTA
       </h1>

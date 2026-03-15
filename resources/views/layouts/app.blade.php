@@ -14,6 +14,9 @@
         color: #fed700 !important;
         font-weight: bold;
     }
+    .content::-webkit-scrollbar{
+        display: none;
+    }
 </style>
 
 <body>
@@ -251,6 +254,29 @@
     <div class="content">
         @yield('content')
     </div>
+
+    <!-- === pendaftaran ppdb nuri ====-->
+
+<!-- Floating WA -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+
+    <!-- Button -->
+    <a 
+    href="/pendaftaran-spmb"
+    target="_blank"
+    class="relative scale-[1.1] transition-transform flex items-center justify-center border-4 rounded-full border-yellow-300 w-16 h-16 hover:scale-110 transition">
+
+        <!-- Pulse Animation -->
+        <span class="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping"></span>
+
+        <!-- Icon -->
+        <img 
+        src="/web_sekolah/public/images/ppdb.png"
+        class="w-[200px] relative z-10 rounded-full">
+
+    </a>
+
+</div>
 
     <!-- ======= footer ======= -->
     <footer class="bg-[black] text-white px-6 md:px-10 py-12">

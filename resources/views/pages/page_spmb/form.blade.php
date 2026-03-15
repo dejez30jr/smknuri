@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="min-h-screen bg-slate-50 flex items-center justify-center p-6 bg-center bg-cover"
-  style="background-attachment: fixed; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/pp1.webp') }}'); backdrop-filter: blur(10px);">
+  style="background-attachment: fixed; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('web_sekolah/public/images/pp1.webp') }}'); backdrop-filter: blur(10px);">
   @if(session('success'))
   <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -53,7 +53,7 @@ class BerandaController extends Controller
         // $testimoni = Saran::all();  masih tahap pengembangan
 
         // data cms section prestasi
-        $prestasi = Prestasi::all();
+        $prestasi = Prestasi::take(4)->get();
 
         // di count section (staff)
         $staff = Staff::all();

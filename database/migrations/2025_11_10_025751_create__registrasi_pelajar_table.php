@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('registrasi_pelajar', function (Blueprint $table) {
             $table->id();
-          
-            $table->string('full_name');
+            
+         $table->string('full_name');
             $table->string('birth_place');
             $table->date('birth_date');
             $table->string('phone', 20);
@@ -24,7 +24,7 @@ return new class extends Migration
             
             $table->text('address');
             $table->string('kecamatan');
-            $table->string('kelurahan');
+            $table->string('kelurahan')->nullable(); 
             $table->string('kota');
 
             $table->string('nisn', 20)->unique();
@@ -36,7 +36,6 @@ return new class extends Migration
 
             $table->string('photo')->nullable();
 
-
             $table->timestamps();
         });
     }
@@ -46,6 +45,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rregistrasi_pelajar');
+        Schema::dropIfExists('registrasi_pelajar');
     }
 };

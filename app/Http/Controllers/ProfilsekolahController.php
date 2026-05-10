@@ -34,6 +34,6 @@ class ProfilsekolahController extends Controller
         $homepage = homepages::all(); // ini di panggil di page profil karena page profil ada footer yang data nya dinamis/bisa di ubah make cms
         $tendik = Staff::all();
 
-        return view('pages.page_profil.profil-sekolah', compact('guru', 'homepage', 'pimpinan', 'rpl', 'akl', 'mp', 'umum', 'tendik'));
+        return view('profil.index', compact('guru', 'homepage', 'pimpinan', 'rpl', 'akl', 'mp', 'umum', 'tendik'));
     }
 }

@@ -21,12 +21,12 @@ class ArtikelController extends Controller {
         ->get();
         // $relatedPosts = Article::take( 3 )->get();
 
-        return view( 'pages.page_artikel.showartikel', compact( 'post', 'relatedPosts', 'homepage' ) );
+        return view( 'artikel.show', compact( 'post', 'relatedPosts', 'homepage' ) );
     }
 
     public function all() {
         $artikel = Article::latest()->paginate(10);
         $homepage = homepages::all(); // ini di panggil di page allArtikel karena page allArtikel ada footer yang data nya dinamis/bisa di ubah make cms    
-        return view('pages.page_artikel.allArtikel', compact('artikel', 'homepage'));  
+        return view('artikel.index', compact('artikel', 'homepage'));  
     }
 }

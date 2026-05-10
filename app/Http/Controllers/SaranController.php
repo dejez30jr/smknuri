@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class SaranController extends Controller
 {
-    // tahap pengembangan
+    // ===== tahap pengembangan next fitur =====
     public function store(Request $request)
     {
         // $request->validate([

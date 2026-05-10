@@ -63,7 +63,7 @@ class BerandaController extends Controller
         // ->groupBy('staff')
         // ->selectRaw('count(*) as total')
         // ->get();
-        return view( 'pages.page_beranda.beranda', compact( 'card1', 'card2', 'card3', 'card4', 'countGuru', 'countStaff', 'homepage', 'prestasi', 'eskul', 'profile' ) );
+        return view( 'beranda.index', compact( 'card1', 'card2', 'card3', 'card4', 'countGuru', 'countStaff', 'homepage', 'prestasi', 'eskul', 'profile' ) );
     }
     // end
 }

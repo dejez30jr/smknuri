@@ -11,7 +11,7 @@ class SpmbController extends Controller {
     */
 
     public function index() {
-          return view( 'pages.page_spmb.form' );
+          return view( 'spmb.create' );
         // return redirect()->back()->with( 'pengembangan', 'Mohon Maaf Formulir Spmb Sedang Tahap Pengembangan' );
     }
 
@@ -57,7 +57,7 @@ class SpmbController extends Controller {
 
         Spmb::create( $validated );
 
-        return redirect()->route('/')->with( 'success', 'Data pendaftaran berhasil disimpan!' );
+        return redirect()->route('beranda')->with( 'success', 'Data pendaftaran berhasil disimpan!' );
     }
 
     /**

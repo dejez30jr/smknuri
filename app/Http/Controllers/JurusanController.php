@@ -12,6 +12,6 @@ class JurusanController extends Controller
     {
          $homepage = homepages::all(); // ini di panggil di page jurusan karena page jurusan ada footer yang data nya dinamis/bisa di ubah make cms
 
-         return view('pages.page_jurusan.jurusan', compact('homepage'));
+         return view('jurusan.index', compact('homepage'));
     }
 }

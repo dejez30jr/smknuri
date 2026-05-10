@@ -376,7 +376,7 @@
             <div class="bg-white">
             <section class="relative md:px-16 pt-6 md:pt-8 -mt-[20px] md:-mt-0 bg-white rounded-t-3xl">
             <!-- navigasi -->
-            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 pt-6 md:pt-0 bg-white">
+            <div class="relative -mt-[20px] md:-mt-[0px] bg-white rounded-t-3xl flex w-full justify-between items-center gap-2 px-4 pt-6 md:pt-0 bg-white">
 
                 <div>
                     <span class="flex items-center text-sm md:text-base">
@@ -403,7 +403,7 @@
             <!-- navigasi end -->
             <!--isi sambutan-->
             <section
-                    class="relative bg-white py-12 leading-relaxed text-gray-800">
+                    class="relative bg-white py-12 px-4 leading-relaxed text-gray-800">
                     <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 items-center">
 
                         <!-- Kiri: Text -->
